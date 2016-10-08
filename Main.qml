@@ -3,8 +3,6 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0
 import SddmComponents 2.0 as Sddm
 
-import QtGraphicalEffects 1.0 // for image
-
 import "components"
 
 
