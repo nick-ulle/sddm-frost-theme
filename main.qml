@@ -3,7 +3,10 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0
 import SddmComponents 2.0 as Sddm
 
-import "file:components" as FrostComponents
+// Import path seems to be different depending on whether we are testing or
+// running in SDDM.
+// import "file:./components" as FrostComponents
+import "components" as FrostComponents
 
 
 Item {
