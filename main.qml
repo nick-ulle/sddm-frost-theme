@@ -3,7 +3,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0
 import SddmComponents 2.0 as Sddm
 
-import "components"
+import "file:components" as FrostComponents
 
 
 Item {
@@ -24,7 +24,7 @@ Item {
     fillMode: Image.PreserveAspectCrop
   }
 
-  Clock {
+  FrostComponents.Clock {
     id: clock
 
     anchors {
@@ -46,7 +46,7 @@ Item {
     }
   }
 
-  ShadowPane {
+  FrostComponents.ShadowPane {
     id: login_pane
     anchors.centerIn: parent
     width: 0.21 * parent.width
@@ -73,7 +73,7 @@ Item {
 
 				model: userModel
 
-        delegate: BorderedImage {
+        delegate: FrostComponents.BorderedImage {
           width: avatar.width
           height: avatar.height
 
@@ -134,6 +134,7 @@ Item {
 
         z: 1000
         width: parent.width
+        height: username.height
         font.family: config.font
         font.pointSize: config.font_size
         background: Rectangle {
@@ -163,7 +164,7 @@ Item {
         }
       }
 
-      ColorButton {
+      FrostComponents.ColorButton {
         id: login_button
 
         width: parent.width
@@ -184,7 +185,7 @@ Item {
     }
   }
 
-  ShadowPane {
+  FrostComponents.ShadowPane {
     id: shutdown_pane
 
     width: ctl_row.width + 4 * unit
@@ -200,7 +201,7 @@ Item {
       anchors.centerIn: parent
       spacing: unit
 
-      ColorButton {
+      FrostComponents.ColorButton {
         id: reboot
 
         width: unit
@@ -218,7 +219,7 @@ Item {
         onClicked: sddm.reboot()
       }
 
-      ColorButton {
+      FrostComponents.ColorButton {
         id: shutdown
 
         width: unit
